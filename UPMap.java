@@ -5,8 +5,7 @@ import java.util.regex.Pattern;
 import java.util.Map;
 import java.util.TreeMap;
 
-// Create outer class
-//public class UPMap extends findUser {
+
 public class UPMap {
 		static boolean until = true;
 		// TODO: Write a program for username(key) & password(value)
@@ -20,46 +19,38 @@ public class UPMap {
 		static Scanner enterNewUN = new Scanner(System.in);
 		static Scanner enterNewPW = new Scanner(System.in);
 		
-		// Create inner class:
-		class sysInit {
-
-			
-			}
-		
 		
 		public static void main(String[] args) {
 			// Instantiate the main menu
-//				UPMap umap = new UPMap();
-//				sysInit dmap = umap.new sysInit();
-				userDB.put("amydosh","password1");
-				userDB.put("kmydosh","password2");
-				userDB.put("cwatza","password3");
-				userDB.put("jmydosh","password4");
+			userDB.put("amydosh","password1");
+			userDB.put("kmydosh","password2");
+			userDB.put("cwatza","password3");
+			userDB.put("jmydosh","password4");
 
 
-				System.out.println("----------------------------------");
-				System.out.println("------------Welcome!!-------------");
-				System.out.println("Please select from the following menu options:");
-				System.out.println("1. Login");
-				System.out.println("2. Change username");
-				System.out.println("3. Change password");
-				System.out.println("4. View password");
-				System.out.println("5. Create a new username");
-				int selection = select.nextInt();
-				
-				if(selection==1) {
-					runselect1();
-				} else if(selection==2) {
-					runselect2();
-				}else if(selection==3) {
-					runselect3();
-				}else if(selection==4) {
-					runselect4();
-				}else if(selection==5) {
-					runselect5();
-				}else {
-					System.out.println("You did not enter a valid selection.");
-				}
+			System.out.println("----------------------------------");
+			System.out.println("------------Welcome!!-------------");
+			System.out.println("Please select from the following menu options:");
+			System.out.println("1. Login");
+			System.out.println("2. Change username");
+			System.out.println("3. Change password");
+			System.out.println("4. View password");
+			System.out.println("5. Create a new username");
+			int selection = select.nextInt();
+			
+			if(selection==1) {
+				runselect1();
+			} else if(selection==2) {
+				runselect2();
+			}else if(selection==3) {
+				runselect3();
+			}else if(selection==4) {
+				runselect4();
+			}else if(selection==5) {
+				runselect5();
+			}else {
+				System.out.println("You did not enter a valid selection.");
+			}
 				
 				
 
@@ -88,6 +79,7 @@ public class UPMap {
 		public static void searchPW(String un, String pw) {
 			boolean until2 = true;
 			int match2 =0;
+			// The below line was utilized to verify the userDB map was correctly passed to this method
 //			System.out.println(userDB);
 			while(until2) {
 				if(userDB.get(un).equals(pw)) {
